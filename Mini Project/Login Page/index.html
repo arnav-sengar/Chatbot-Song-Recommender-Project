@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Song Recommender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>AI Song Recommender</h1>
+    </header>
+    <main>
+      <section id="chat">
+        <div id="chat-window">
+          <!-- Chat messages will go here -->
+        </div>
+        <input type="text" id="chat-input" placeholder="Ask the bot for a song recommendation...">
+        <button id="send-btn">Send</button>
+      </section>
+      <section id="recommendations">
+        <h2>Recommended Songs</h2>
+        <div id="songs-list">
+          <!-- Recommended songs will appear here -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Link the JavaScript file just before the closing </body> tag -->
+  <script src="app.js"></script>
+</body>
+</html>
