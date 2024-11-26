@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "genre": "Pop",
+        "mood": "Energetic"
+    },
+    {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "genre": "Pop",
+        "mood": "Happy"
+    },
+    {
+        "title": "Someone Like You",
+        "artist": "Adele",
+        "genre": "Pop",
+        "mood": "Sad"
+    },
+    {
+        "title": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "genre": "Rock",
+        "mood": "Epic"
+    },
+    {
+        "title": "Imagine",
+        "artist": "John Lennon",
+        "genre": "Rock",
+        "mood": "Peaceful"
+    },
+    {
+        "title": "No Tears Left to Cry",
+        "artist": "Ariana Grande",
+        "genre": "Pop",
+        "mood": "Uplifting"
+    }
+]
