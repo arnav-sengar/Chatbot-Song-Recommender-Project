@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melodia - Song Recommender Chatbot</title>
+  <!-- Link to Flask Static CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h1>🎵 Melodia 🎵</h1>
+      <p>Your personal song recommendation assistant</p>
+    </div>
+    <div id="chat-box" class="chat-box"></div>
+    <div class="input-container">
+      <input 
+        type="text" 
+        id="user-input" 
+        class="user-input" 
+        placeholder="Ask for a song recommendation..."
+      >
+      <button id="send-btn" class="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Copyright Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Melodia. All rights reserved.</p>
+  </footer>
+
+  <!-- Link to Flask Static JavaScript -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Chat Container */
+  .chat-container {
+    width: 100%;
+    max-width: 500px;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Chat Header with Gradient Animation */
+  .chat-header {
+    background: linear-gradient(270deg, #6c5ce7, #ff7675, #fdcb6e, #00b894);
+    background-size: 400% 400%;
+    animation: GradientBackground 10s ease infinite;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  @keyframes GradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .chat-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .chat-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  /* Chat Box */
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Message Styling */
+  .message {
+    padding: 12px 18px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.2s ease;
+  }
+  
+  .message.user {
+    background-color: #6c5ce7;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .message.bot {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+  }
+  
+  /* Timestamp Styling */
+  .timestamp {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    text-align: right;
+  }
+  
+  .message.bot .timestamp {
+    text-align: left;
+  }
+  
+  /* Loading Indicator */
+  .loading-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .loading-indicator::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Input Container */
+  .input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .user-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  
+  .user-input:focus {
+    border-color: #6c5ce7;
+  }
+  
+  .send-btn {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    background-color: #5a4bcf;
+  }
+  
+  /* Rating System Styling */
+  .rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+  
+  .rating-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .rating-button:hover {
+    background-color: #ccc;
+  }
+  
+  .rating-button.active {
+    background-color: #6c5ce7;
+  }
+  
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 90vh;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .chat-header h1 {
+      font-size: 24px;
+    }
+  
+    .chat-header p {
+      font-size: 12px;
+    }
+  
+    .message {
+      font-size: 14px;
+    }
+  
+    .timestamp {
+      font-size: 10px;
+    }
+  
+    .user-input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .send-btn {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  
+    .rating-button {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    width: 80%;
+    height: 80%;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-box h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #login-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  
+  #login-form input:focus {
+    border-color: #6c5ce7;
+  }
+  
+  #login-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  #login-btn:hover {
+    background-color: #5a4bcf;
+  }
+  
+  #error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  #register-link {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  #register-link a {
+    text-decoration: none;
+    color: #6c5ce7;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
