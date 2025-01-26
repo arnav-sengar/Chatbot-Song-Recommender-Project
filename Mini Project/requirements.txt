@@ -1,0 +1,7 @@
+flask
+json
+nltk
+random 
+string
+
+
